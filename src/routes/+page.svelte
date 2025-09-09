@@ -37,7 +37,7 @@
 
       <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
         <a href="/contact"
-           class="rounded-md bg-violet-700 px-5 py-3 text-white shadow-sm hover:bg-violet-600">
+           class="rounded-md bg-violet-700 px-5 py-3 text-white shadow-sm hover:bg-violet-600 hover:shadow-md hover:shadow-violet-500/50 transition-all duration-200">
           Démarrer un projet
         </a>
         <button

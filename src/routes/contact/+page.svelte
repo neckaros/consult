@@ -138,7 +138,7 @@
   
               <div class="flex items-center gap-3">
                 <button type="submit"
-                        class="inline-flex items-center justify-center gap-2 rounded-md   disabled:opacity-60 bg-violet-700 px-5 py-3 text-white shadow-sm hover:bg-violet-600"
+                        class="inline-flex items-center justify-center gap-2 rounded-md   disabled:opacity-60 bg-violet-700 px-5 py-3 text-white shadow-sm hover:bg-violet-600 hover:shadow-md hover:shadow-violet-500/50 transition-all duration-200"
                         disabled={pending}>
                   {#if pending}
                     <span class="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white"></span>
