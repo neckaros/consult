@@ -16,7 +16,10 @@
   ></div>
 
   <!-- HERO -->
-  <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+  <section class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+    <div class="absolute -top-6 -left-6 w-72 h-72 rounded-full bg-violet-300 mix-blend-multiply blur-xl opacity-70 animate-blob"></div>
+    <div class="absolute -top-6 -right-6 w-72 h-72 rounded-full bg-yellow-300 mix-blend-multiply blur-xl opacity-70 animate-blob animation-delay-2s"></div>
+    <div class="absolute -bottom-10 left-20 w-72 h-72 rounded-full bg-pink-300 mix-blend-multiply blur-xl opacity-70 animate-blob animation-delay-4s"></div>
     <div class="flex flex-col items-center text-center">
       <!-- Placez votre logo dans static/logo-jezconsult.png -->
       <img

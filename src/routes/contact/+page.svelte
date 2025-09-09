@@ -1,22 +1,26 @@
 <!-- src/routes/contact/+page.svelte -->
 <script lang="ts">
-    import { enhance, type SubmitFunction } from '$app/forms';
-    import type { ActionData } from './$types';
-  
-    // Props serveur typées
-    let { form }: { form: ActionData } = $props();
-  
-    // Rune Svelte 5 : état local simple
+    import { enhance } from '$app/forms';                  // OK
+    import type { SubmitFunction } from '@sveltejs/kit';   // <-- corrige l'import
+
+    import type { ActionData /* ou PageProps */ } from './$types';  // Typage page
+    let { form }: { form: ActionData } = $props();                   // ou: let { data, form }: PageProps = $props();
+
     let pending = $state(false);
-  
-    // use:enhance avec typage
+
     const onEnhance: SubmitFunction = () => {
-      pending = true;
-      return async ({ result, update }) => {
-        await update(result);
-        pending = false;
-      };
+    pending = true;
+    return async ({ result, update }) => {
+      // Exemple: logique selon le type de résultat
+      if (result.type === 'failure') {
+        // erreurs déjà renvoyées au store form
+      }
+      // Applique le résultat + options (facultatif)
+      await update({ reset: result.type === 'success' });
+      pending = false;
     };
+  };
+
   </script>
   
   <svelte:head>
