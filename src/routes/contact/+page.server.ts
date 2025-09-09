@@ -1,5 +1,8 @@
 // src/routes/contact/+page.server.ts
 import { fail, type Actions } from '@sveltejs/kit';
+import { Resend } from 'resend';
+import { RESEND_API_KEY, MAIL_FROM, MAIL_TO } from '$env/static/private';
+
 
 type ContactSuccess = { success: true; message: string };
 type ContactInvalid = { success: false; message: string; errors: Record<string, string> };
@@ -33,7 +36,48 @@ export const actions = {
       return fail(400, { success: false, message: 'Merci de corriger les champs indiqués.', errors } satisfies ContactInvalid);
     }
 
+
+
     // TODO: SMTP/API
+
+    const resend = new Resend(RESEND_API_KEY);
+
+    function escapeHtml(s: string) {
+      return s
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+    
+    const safeName = escapeHtml(name);
+    const safeCompany = escapeHtml(company ?? '');
+    const safeEmail = escapeHtml(email);
+    const safeSubject = escapeHtml(subject);
+    const safeMsgHtml = escapeHtml(message).replace(/\r?\n/g, '<br>'); // préserve les retours en HTML
+    const safeMsgText = message; // version texte brute, retours conservés
+    
+    await resend.emails.send({
+      from: MAIL_FROM,               // ex: "JezConsult <contact@tondomaine.fr>"
+      to: [MAIL_TO],
+      subject: `Consult Query - ${safeName} ${safeCompany}`,
+      replyTo: email,
+      html: `
+        <p><strong>Name:</strong> ${safeName}</p>
+        <p><strong>Company:</strong> ${safeCompany}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Subject:</strong> ${safeSubject}</p>
+        <p><strong>Message:</strong><br>${safeMsgHtml}</p>
+      `,
+      text: `Name: ${name}
+    Company: ${company ?? ''}
+    Email: ${email}
+    Subject: ${subject}
+    Message:
+    ${safeMsgText}`
+    });
+      
     return { success: true, message: 'Merci, votre message a bien été envoyé.' } satisfies ContactSuccess;
   }
 } satisfies Actions;

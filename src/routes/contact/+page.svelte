@@ -57,27 +57,34 @@
   
               <!-- Nom -->
               <div class="relative">
-                <input id="name" name="name" type="text" required placeholder=" "
-                       class="peer w-full rounded-xl border border-slate-300 bg-white/90 px-4 py-4 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-violet-600" />
-                <label for="name"
-                       class="pointer-events-none absolute left-3 top-3 px-1 text-slate-500 transition-all
-                              peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-                              peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700 bg-white/80">
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder=" "
+                  class="peer w-full rounded-xl border border-slate-300 bg-white/90 px-4 py-4 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-violet-600" />
+              
+                <label
+                  for="name"
+                  class="pointer-events-none absolute left-3 top-3 px-1 bg-white rounded text-slate-500 transition-all
+                         peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700
+                         peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-slate-600">
                   Nom
                 </label>
-                {#if form?.errors?.name}<p class="mt-1 text-sm text-rose-600">{form.errors.name}</p>{/if}
               </div>
   
               <!-- Email -->
               <div class="relative">
                 <input id="email" name="email" type="email" required placeholder=" "
                        class="peer w-full rounded-xl border border-slate-300 bg-white/90 px-4 py-4 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-violet-600" />
-                <label for="email"
-                       class="pointer-events-none absolute left-3 top-3 px-1 text-slate-500 transition-all
-                              peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-                              peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700 bg-white/80">
-                  Email
-                </label>
+                       <label
+                       for="email"
+                       class="pointer-events-none absolute left-3 top-3 px-1 bg-white rounded text-slate-500 transition-all
+                              peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700
+                              peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-slate-600">
+                       Email
+                     </label>
                 {#if form?.errors?.email}<p class="mt-1 text-sm text-rose-600">{form.errors.email}</p>{/if}
               </div>
   
@@ -85,11 +92,13 @@
               <div class="relative">
                 <input id="company" name="company" type="text" placeholder=" "
                        class="peer w-full rounded-xl border border-slate-300 bg-white/90 px-4 py-4 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-violet-600" />
-                <label for="company"
-                       class="pointer-events-none absolute left-3 top-3 px-1 text-slate-500 transition-all
-                              peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-                              peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700 bg-white/80">
-                  Société (optionnel)
+                
+                       <label
+                  for="company"
+                  class="pointer-events-none absolute left-3 top-3 px-1 bg-white rounded text-slate-500 transition-all
+                         peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700
+                         peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-slate-600">
+                         Société (optionnel)
                 </label>
               </div>
   
@@ -110,12 +119,13 @@
               <div class="relative">
                 <textarea id="message" name="message" rows="6" required placeholder=" "
                           class="peer w-full rounded-xl border border-slate-300 bg-white/90 px-4 py-4 placeholder-transparent focus:outline-none focus:ring-2 focus:ring-violet-600"></textarea>
-                <label for="message"
-                       class="pointer-events-none absolute left-3 top-3 px-1 text-slate-500 transition-all
-                              peer-placeholder-shown:top-3 peer-placeholder-shown:text-base
-                              peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700 bg-white/80">
-                  Message
-                </label>
+                          <label
+                          for="message"
+                          class="pointer-events-none absolute left-3 top-3 px-1 bg-white rounded text-slate-500 transition-all
+                                 peer-focus:-top-2 peer-focus:text-xs peer-focus:text-violet-700
+                                 peer-[:not(:placeholder-shown)]:-top-2 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:text-slate-600">
+                                 Message
+                        </label>
                 {#if form?.errors?.message}<p class="mt-1 text-sm text-rose-600">{form.errors.message}</p>{/if}
               </div>
   
