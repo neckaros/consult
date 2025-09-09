@@ -28,7 +28,7 @@
     <meta name="description" content="Contact IT, IA & Finance — réponse rapide, cadrage clair et premiers jalons." />
   </svelte:head>
   
-  <div class="bg-gray-50 min-h-screen flex items-center justify-center px-6 sm:px-10 lg:px-16">
+  <div class="bg-gray-50 min-h-screen flex items-center justify-center px-6 sm:px-10 lg:px-16 overflow-hidden">
     <div class="relative w-full max-w-3xl">
       <!-- BLOBS animés -->
       <div class="absolute -top-6 -left-6 w-[80%] h-[80%] rounded-full bg-violet-300 mix-blend-multiply blur-xl opacity-70 animate-blob"></div>
