@@ -147,7 +147,7 @@
                     Envoyer
                   {/if}
                 </button>
-                <a href="mailto:contact@jezconsult.fr" class="text-sm text-slate-600 hover:text-slate-800">Ou écrire un email</a>
+                
               </div>
             </form>
           </div>
