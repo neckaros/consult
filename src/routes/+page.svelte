@@ -76,59 +76,71 @@
 
     <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
       <!-- IT -->
-      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur p-6 hover:shadow-md transition">
-        <h3 class="text-lg font-semibold">Gestion de projet</h3>
-        <p class="mt-2 text-sm text-slate-600">
-          En méthodologie Agile avec gestion des deadlines et maitrise des risques.
-        </p>
-        <ul class="mt-4 text-sm text-slate-700 space-y-1">
-          <li>• Longue éxpérience dans la mise en place de l'agilité à l'echette en société</li>
-          <li>• Mise en place de KPI pour suivre l'avancé et les gains du projet</li>
-          <li>• Identification et remédiations des risques</li>
-        </ul>
-        <a href="/services#it" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur hover:shadow-md transition">
+        <img src="/illustrations/agile.webp" alt="Gestion de projet" class="w-full aspect-video object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">Gestion de projet</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            En méthodologie Agile avec gestion des deadlines et maitrise des risques.
+          </p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-1">
+            <li>• Longue éxpérience dans la mise en place de l'agilité à l'echette en société</li>
+            <li>• Mise en place de KPI pour suivre l'avancé et les gains du projet</li>
+            <li>• Identification et remédiations des risques</li>
+          </ul>
+          <a href="/services#it" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+        </div>
       </article>
       <!-- IT -->
-      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur p-6 hover:shadow-md transition">
-        <h3 class="text-lg font-semibold">Conseil IT</h3>
-        <p class="mt-2 text-sm text-slate-600">
-          Architecture SvelteKit/TypeScript, API, intégration CI/CD et observabilité, de la conception à la mise en prod.
-        </p>
-        <ul class="mt-4 text-sm text-slate-700 space-y-1">
-          <li>• Apps web SvelteKit & SSR</li>
-          <li>• API, Auth, performances</li>
-          <li>• DevOps & qualité logicielle</li>
-        </ul>
-        <a href="/services#it" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur hover:shadow-md transition">
+        <img src="/illustrations/svelte.webp" alt="Gestion de projet" class="w-full aspect-video object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">Conseil IT</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Architecture moderne, API, intégration CI/CD et observabilité, de la conception à la mise en prod.
+          </p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-1">
+            <li>• Apps web SvelteKit, React & SSR</li>
+            <li>• API, Auth, performances</li>
+            <li>• DevOps & qualité logicielle</li>
+          </ul>
+          <a href="/services#it" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+        </div>
       </article>
 
       <!-- IA -->
-      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur p-6 hover:shadow-md transition">
-        <h3 class="text-lg font-semibold">IA appliquée</h3>
-        <p class="mt-2 text-sm text-slate-600">
-          RAG, agents, automatisation et intégration données pour améliorer support, recherche et productivité.
-        </p>
-        <ul class="mt-4 text-sm text-slate-700 space-y-1">
-          <li>• Automatisation de vos taches</li>
-          <li>• RAG sur docs internes</li>
-          <li>• Workflows & agents</li>
-          <li>• Évaluation & garde‑fous</li>
-        </ul>
-        <a href="/services#ia" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur hover:shadow-md transition">
+        <img src="/illustrations/agents.webp" alt="Gestion de projet" class="w-full aspect-video object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">IA appliquée</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            RAG, agents, automatisation et intégration données pour améliorer support, recherche et productivité.
+          </p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-1">
+            <li>• Automatisation de vos taches</li>
+            <li>• RAG sur docs internes</li>
+            <li>• Workflows & agents</li>
+            <li>• Évaluation & garde‑fous</li>
+          </ul>
+          <a href="/services#ia" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+        </div>
       </article>
 
       <!-- Finance -->
-      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur p-6 hover:shadow-md transition">
-        <h3 class="text-lg font-semibold">Finance & Data</h3>
-        <p class="mt-2 text-sm text-slate-600">
-          Pipelines data finance, reporting fiable et optimisation des coûts cloud/produit pilotée par indicateurs.
-        </p>
-        <ul class="mt-4 text-sm text-slate-700 space-y-1">
-          <li>• Modélisation & qualité data</li>
-          <li>• Tableaux de bord</li>
-          <li>• FinOps & gouvernance</li>
-        </ul>
-        <a href="/services#finance" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+      <article class="group rounded-2xl border border-slate-200 bg-white/60 backdrop-blur hover:shadow-md transition">
+        <img src="/illustrations/finance.webp" alt="Gestion de projet" class="w-full aspect-video object-cover">
+        <div class="p-6">
+          <h3 class="text-lg font-semibold">Finance & Data</h3>
+          <p class="mt-2 text-sm text-slate-600">
+            Pipelines data finance, reporting fiable et optimisation des coûts cloud/produit pilotée par indicateurs.
+          </p>
+          <ul class="mt-4 text-sm text-slate-700 space-y-1">
+            <li>• Modélisation & qualité data</li>
+            <li>• Tableaux de bord</li>
+            <li>• FinOps & gouvernance</li>
+          </ul>
+          <a href="/services#finance" class="mt-5 inline-block text-violet-700 hover:text-violet-600">En savoir plus →</a>
+        </div>
       </article>
     </div>
   </section>
@@ -136,20 +148,20 @@
   <!-- APPROCHE -->
   <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
     <div class="rounded-2xl border border-slate-200 bg-white/60 backdrop-blur p-8">
-      <h2 class="text-2xl font-semibold tracking-tight">Approche</h2>
+      <h2 class="text-3xl font-semibold tracking-tight">Approche</h2>
       <div class="mt-6 grid gap-6 md:grid-cols-3">
         <div>
-          <p class="text-sm text-slate-500">01</p>
+          <p class="text-7xl text-indigo-500">1</p>
           <p class="font-medium">Cadrage rapide</p>
           <p class="mt-1 text-sm text-slate-600">Objectifs, périmètre et KPIs partagés.</p>
         </div>
         <div>
-          <p class="text-sm text-slate-500">02</p>
+          <p class="text-7xl text-indigo-700">2</p>
           <p class="font-medium">Livraisons courtes</p>
           <p class="mt-1 text-sm text-slate-600">Incréments utiles toutes les 1–2 semaines.</p>
         </div>
         <div>
-          <p class="text-sm text-slate-500">03</p>
+          <p class="text-7xl text-purple-700">3</p>
           <p class="font-medium">Mesure & itérations</p>
           <p class="mt-1 text-sm text-slate-600">Pilotage par résultats et retours utilisateurs.</p>
         </div>
